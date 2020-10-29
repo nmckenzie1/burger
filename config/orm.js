@@ -1,10 +1,29 @@
 const connection = require("../config/connection")
-
+function createQmarks(num){
+    let arr = [];
+    for (let index = 0; index < num; index++) {
+        arr.push("?")
+        
+    }return arr.toString();
+}
+function translateSql(obj) {
+    let arr = [];
+    for (var key in ob) {
+    let value = ob[key];
+    if (Object.hasOwnProperty.call(ob, key)){
+        if(typeof value === "string" && value.indexOf(" ") >= 0) {
+            value = "'" + value + "'"
+        }
+        arr.push(key + "=" + value)
+    }
+        
+    }
+}
 let orm = {
-    selectAll: function(whaToSelect, table, cb){
-        let queryString = "SELECT ?? FROM ??";
+    selectAll: function(table, cb){
+        let queryString = "SELECT * FROM " + table + ";";
 
-        connection.query(queryString, [whatToSelect, table], function(err, res){
+        connection.query(queryString, function(err, res){
             if (err){
                 throw err;
             }
@@ -46,3 +65,4 @@ let orm = {
         })
     }
 }
+module.exports = orm
