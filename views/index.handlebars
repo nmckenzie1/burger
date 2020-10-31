@@ -1,0 +1,59 @@
+<div class="container">
+
+    <div class="jumbotron text-center">
+        <h1>Big Mac's House of Big Macs</h1>
+        <br>
+        <h2>What Kinda Burg u want???</h2>
+        <panel>
+            <form class="create-form text-center">
+                <div class="form-group">
+                    
+                    <input type="text" id="newburger" placeholder="Submit your dream burger" name="burger">
+                  
+                    <button type="submit" class="btn btn-dark" id="addburger">
+                        <span class="fas fa-hamburger"></span>
+                    </button>
+                </div>
+            </form>
+        </panel>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading text-center" ><strong>CLICK A BURGER TO DEVOUR</strong>
+                    
+                </div>
+                <div class="panel-body justify-content-center">
+
+                    <ul class="text-center">
+                        {{#each burgers}}
+                        {{#unless devoured}}
+                        <button type="button" class="eatburger btn btn-light" id="eatbutton" data-id="{{this.id}}"
+                            data-newDevoured="{{devour}}"><span class="fas fa-cookie-bite"></span> Devour Dis {{this.burger_name}} <span class="fas fa-cookie-bite"></span></button>
+                        <hr>
+                        {{/unless}}
+                        {{/each}}
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading text-center"><strong>CLICK A BURGER TO FORGET U ATE IT</strong>
+                </div>
+                <div class="panel-body">
+                    <ul class= "text-center">
+                        {{#each burgers}}
+                        {{#if devoured}}
+                        <button type="button" class="trashburger btn btn-dark" id="trashbutton" data-id="{{this.id}}"
+                            data-newDevoured="{{devour}}"><span class="fa fa-trash"></span> Forgeddabout Eating the {{this.burger_name}} You Ate <span class="fa fa-trash"></span></button>
+                        <hr>
+                        {{/if}}
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

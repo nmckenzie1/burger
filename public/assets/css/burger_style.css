@@ -1,0 +1,34 @@
+
+  
+  body { 
+      /* background-image: url(https://image.freepik.com/free-vector/burger-seamless-pattern-background-vector-design_22159-41.jpg) ; */
+      background-position: center center;
+      background-repeat:  no-repeat;
+      background-attachment: fixed;
+      background-size:  cover;
+      background-color: #000000;  
+  }
+  .jumbotron{
+      background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7e757c61-f600-4009-9249-ab875e893c1e/d26c22t-453a4558-c053-49ae-8e09-1650e77a61aa.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvN2U3NTdjNjEtZjYwMC00MDA5LTkyNDktYWI4NzVlODkzYzFlXC9kMjZjMjJ0LTQ1M2E0NTU4LWMwNTMtNDlhZS04ZTA5LTE2NTBlNzdhNjFhYS5qcGcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.z2Uhd7vgO5xGcbp_FGbBiANM2iGs_LoD0buQdfLfwOU);
+  }
+  .wrapper {
+      height: 100%; 
+      width: 100%; 
+      }
+ .panel{
+     background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-vintage-old-paper-background-paperbackgroundpaper-image_79357.jpg);
+     min-height: 800px
+ } 
+  .message {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%; 
+    height:45%;
+    bottom: 0; 
+    display: block;
+    position: absolute;
+    background-color: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 0.5em;
+  }
